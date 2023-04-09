@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.house {
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 298px;
+    height: auto;
+    
+}
+
+.floor {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.part-of-floor {
+    height: 100px;
+    border: 1px solid #fba956;
+    background-color: #fadbbc;
+}
+
+.room {
+    width: 140px;
+}
+
+.lift-shaft {
+    width: 50px;
+}
+
+.door {
+    width: 100px;
+}
+
+.lift{
+    position: absolute;
+    border: 2px solid #928e8b;
+    background-color: #c8c1bb;
+    width: 50px;
+    height: 98px;
+    bottom: 0;
+    left: 141px;
+}
+
+.js-buttons {
+    width: 100px;
+    height: 100px;
+    background-color: #fadbbc
+}
+
+
+
+
+#lift {
+    transition: bottom 1s linear 0s;
+}
+
+.getNumber {
+    position: absolute;
+    top: 20px
+}
+@media (max-width: 767px){
+    .house {
+        position: relative;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 298px;
+        height: auto;
+        
+    }
+
+    .room {
+        width: 30px;
+    }
+
+    .lift {
+        left: 2rem;
+        bottom: 0;
+    }
+    .deskNumber{
+        display: none;
+    }
+    .js-buttons::after{
+        content: attr(data-mark);
+        font-size: 20px;
+        color: black;
+    }
+    
+    .js-buttons::before{
+        content: attr(data-floor);
+        font-size: 20px;
+        margin: 0 0 0 10px;
+        color: black;
+    
+    }
+    .lift{
+        position: absolute;
+        border: 2px solid #928e8b;
+        background-color: #c8c1bb;
+        width: 50px;
+        height: 98px;
+        bottom: 0;
+        left: 32px;
+    }
+    
+
+}
+
+@media (min-width: 768px){
+    .mobileNumber{
+        display: none;
+    }
+    .deskNumber {
+        display: block;
+    }
+    .room::after{
+        content: attr(data-mark);
+        font-size: 20px;
+        color: black;
+    }
+    
+    .room::before{
+        content: attr(data-floor);
+        font-size: 20px;
+        margin: 0 0 0 10px;
+        color: black;
+    
+    }
+    
+}

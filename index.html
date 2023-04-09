@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛИФТ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="getNumber">
+        <form action="#" name="numberOf">
+            <label for="quantity">Количество этажей (от 4 до 6):</label>
+            <input type="number" id="quantity" name="quantity" min="4" max="6">
+            <input type="submit" value="Построить!" id="submit">
+            <input type="button" value="Сбросить" onclick="location.reload(); return false;">
+          </form>
+    </div>
+    <div class="house">
+        <div class="lift" id="lift"></div>
+        <div class="first-floor floor">
+            <div class="room part-of-floor floor-num" data-floor="1" data-mark="*"></div>
+            <div class="lift-shaft part-of-floor"></div>
+            <div class="door part-of-floor">
+                <button type="button" value="1" class="js-buttons floor-num" id="1" data-floor="1" data-mark="*"></button>
+            </div>
+        </div>
+        <div class="second-floor floor">
+            <div class="room part-of-floor floor-num" data-floor="2"></div>
+            <div class="lift-shaft part-of-floor"></div>
+            <div class="door part-of-floor">
+                <button type="button" value="2" class="js-buttons floor-num" id="2" data-floor="2"></button>
+            </div>
+        </div>
+        <div class="third-floor floor">
+            <div class="room part-of-floor floor-num" data-floor="3"></div>
+            <div class="lift-shaft part-of-floor"></div>
+            <div class="door part-of-floor">
+                <button type="button" value="3" class="js-buttons floor-num" id="3" data-floor="3"></button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
